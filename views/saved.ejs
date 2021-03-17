@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a href="/">home</a>
+    <a href="/all">all</a>
+    <a href="/mySavedList">my</a>
+
+
+    <div>
+        <form action="/myList" method="POST">
+
+        <h3>Country : <%= element.Country %> </h3>
+        <h3>TotalConfirmed : <%= element.TotalConfirmed %> </h3>
+        <h3>TotalDeaths : <%= element.TotalDeaths %> </h3>
+        <h3>TotalRecovered : <%= element.TotalRecovered %> </h3>
+        <h3>Date : <%= element.Date %> </h3>
+
+        <button type="submit">Save</button>
+         </form>
+    </div>
+
+
+</body>
+</html>
