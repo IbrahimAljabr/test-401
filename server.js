@@ -31,7 +31,7 @@ app.get('/all',allWorld);
 app.post('/myList',myList);
 app.get('/saved/:id',details);
 app.delete('/saved/:id',deleteitem);
-app.put('/saved/:id',details);
+app.put('/saved/:id',updateitmes);
 app.get('/mySavedList',mySavedList)
 
 
@@ -39,6 +39,17 @@ app.get('/mySavedList',mySavedList)
 
 // functions
 
+function updateitmes(req,res) {
+    
+    let id= req.params.id;
+    let query=`update  help where id = $1;`;
+    let safeValue = [id];
+
+    client.query(query,safeValue).then(()=>{
+        
+        res.redirect('/');
+    })
+}
 function deleteitem(req,res) {
     
     let id= req.params.id;

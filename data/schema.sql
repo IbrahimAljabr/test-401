@@ -10,4 +10,3 @@ create table help(
     Date varchar(255)
 );
 select * from help;
-
